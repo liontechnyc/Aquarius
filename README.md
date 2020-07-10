@@ -102,7 +102,7 @@ npm run <script>
 | `format`      | Lint the codebase and assert style pattern                    |
 | `lint-staged` | Same as `format` however, specifically for use with Git Hooks |
 | `start`       | Same as `develop`                                             |
-| `serve`       | Serve production build locally, great for staging             |
+| `serve`       | Serve production build locally; *great for staging*             |
 | `clean`       | Clean artifacts from `build` and `develop`                    |
 | `test`        | Run unit test                                                 |
 | `optimize`    | Optimize static images for web and mobile; in `src/images`    |
