@@ -1,0 +1,26 @@
+# Service Section Content
+
+- title: Renovations
+  description: Kitchen, bathroom, garage, basement, deck, patio and more. As needed we establish relationships with partners who we know will help us create added value for your project.
+  image: service1.jpg
+  route: /#services
+
+- title: Roofing
+  description: Asphalt, clay, wood shaker, slate, concrete, metal
+  image: service2.jpg
+  route: /#services
+  
+- title: Interior/Exterior Walls
+  description: Sheet rock, drywall, tiles,concrete, cement, stucco, painting, thorocoat, brickwork, pointing, sidings
+  image: service3.jpg
+  route: /#services
+
+- title: Interior/Exterior Floors
+  description: Tiles, wood, stone, concrete, pavers, cement, marble, carpet, driveway, always, sidewalks
+  image: service4.jpg
+  route: /#services
+
+- title: Demolition & Post Construction Clean Up
+  description: We treat your project with utmost respect by maintaining a hazard-free and clean environment during and after the construction.
+  image: service5.jpg
+  route: /#services

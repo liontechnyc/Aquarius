@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "jsx": "preserve",
+    "lib": ["dom", "es2016"],
+    "strict": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": false,
+    "allowJs": true,
+    "typeRoots": ["node_modules/@types", "src/@types"],
+  },
+  "files": [
+    "src/@types/index.d.ts",
+  ],
+  "include": ["src/**/*"],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts", 
+    "public", 
+    ".cache", 
+    ".template"
+  ]
+}

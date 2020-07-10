@@ -1,0 +1,34 @@
+$font-family: 'Lato', 'Roboto', monospace;
+
+html {
+  font-family: $font-family;
+  color: ui-layout($palette, 'light');
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
+
+  &:hover {
+    color: ui-color-lighter($palette, 'interactive');
+  }
+  &:active,
+  &.active {
+    color: ui-color-light($palette, 'interactive');
+  }
+  &:visited {
+    // ? ... options Watson, options!?
+  }
+}
+
+button,
+.btn {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input {
+  font-family: inherit;
+  font-size: inherit;
+}

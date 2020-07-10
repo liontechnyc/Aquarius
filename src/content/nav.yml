@@ -1,0 +1,13 @@
+# Navigation Content
+
+- title: Home
+  route: /
+
+- title: Services
+  route: /#services
+
+- title: About
+  route: /#about
+  
+- title: Contact Us
+  route: /#footer
