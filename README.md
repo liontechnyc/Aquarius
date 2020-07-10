@@ -1,4 +1,8 @@
+# Aquarius
 
+![Aquarius Logo](assets/logo.png)
+
+> _A Typescript fork of Gatsby bootstrapped with frontend optimization tools for development and production._
 ## 🚀 Quick Start
 
 1.  **Create an Aquarius site.**
@@ -85,7 +89,7 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 ## 🎓 Learning Aquarius
 
-> Aquarius is a Gatsby fork!
+> Aquarius essentially forks Gatsby
 
 Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
 
