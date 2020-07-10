@@ -1,8 +1,8 @@
 {
-  "name": "versatile-landing-site",
+  "name": "aquarius",
   "private": true,
-  "description": "The landing web site for Versatile Constructions",
-  "version": "1.1.1",
+  "description": "Your project description",
+  "version": "1.0.0",
   "author": "Ezra Singh <ezra@liontech.nyc>",
   "dependencies": {
     "@artsy/fresnel": "^1.1.0",
@@ -78,9 +78,10 @@
   "keywords": [
     "gatsby",
     "react",
-    "typescript"
+    "typescript",
+    "liontechnyc"
   ],
-  "license": "Unlicensed",
+  "license": "GPL-2.0-only",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop -p 5000",
@@ -95,7 +96,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.com:liontechnyc/clients/versatile/versatile-app.git"
+    "url": "https://gitlab.com/liontechnyc/stacks/aquarius.git"
   },
   "bugs": {
     "url": "https://liontech.nyc"
