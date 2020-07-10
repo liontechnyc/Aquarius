@@ -3,6 +3,7 @@
 ![Aquarius Logo](assets/logo.png)
 
 > _A Typescript fork of Gatsby bootstrapped with frontend optimization tools for development and production._
+
 ## 🚀 Quick Start
 
 1.  **Create an Aquarius site.**
@@ -55,7 +56,7 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
 
-2.  **`/scripts`**: This directory contains utility scripts *e.g* static image optimization.
+2.  **`/scripts`**: This directory contains utility scripts _e.g_ static image optimization.
 
 3.  **`/test`**: This directory contains testing utilities and Jest preprocessing.
 
@@ -71,11 +72,11 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 9.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
 
-10.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+10. **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
 
-11.  **`jest.config.js`**: Jest testing framework configuration.
+11. **`jest.config.js`**: Jest testing framework configuration.
 
-12.  **`LICENSE`**: Aquarius is licensed under the GPLv2 license.
+12. **`LICENSE`**: Aquarius is licensed under the GPLv2 license.
 
 13. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
 
@@ -86,6 +87,29 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 16. **`tsconfig.json`**: Typescript compiler configuration (see [reference](https://www.typescriptlang.org/docs/handbook/project-references.html)).
 
 17. **`tslint.json`**: Typescript linter configuration (see [reference](https://palantir.github.io/tslint/usage/configuration/)).
+
+## scripts
+
+```shell
+# Execute scripts with NPM
+npm run <script>
+```
+
+| Script      | Function                                                      |
+| ----------- | ------------------------------------------------------------- |
+| build       | Compile project for production and distribution               |
+| develop     | Run development server on port 5000                           |
+| format      | Lint the codebase and assert style pattern                    |
+| lint-staged | Same as `format` however, specifically for use with Git Hooks |
+| start       | Same as `develop`                                             |
+| serve       | Serve production build locally, great for staging             |
+| clean       | Clean artifacts from `build` and `develop`                    |
+| test        | Run unit test                                                 |
+| optimize    | Optimize static images for web and mobile; in `src/images`    |
+| type-check  | Assert Typescript typings                                     |
+
+
+> * You may have to run `npm start` twice due to a glitch with the `sharp` and `gatsby-plugin-manifest` modules. Use this remedy only if it hangs on **non-square images** compilation *
 
 ## 🎓 Learning Aquarius
 
@@ -102,4 +126,3 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 <!-- Configure your repository info to enable this button -->
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=)
-
