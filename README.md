@@ -102,7 +102,7 @@ npm run <script>
 | `format`      | Lint the codebase and assert style pattern                    |
 | `lint-staged` | Same as `format` however, specifically for use with Git Hooks |
 | `start`       | Same as `develop`                                             |
-| `serve`       | Serve production build locally; *great for staging*             |
+| `serve`       | Serve production build locally; _great for staging_           |
 | `clean`       | Clean artifacts from `build` and `develop`                    |
 | `test`        | Run unit test                                                 |
 | `optimize`    | Optimize static images for web and mobile; in `src/images`    |
@@ -120,8 +120,12 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 - **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
 
+## 🔋 Batteries Included
+
+- Built in pages for **Cookies Policy** and **Privacy Policy** found respectively at `/cookies` and `/privacy` routes. To edit these refer to `src/templates` and `src/markdown`. These templates are injected via the [Gatsby Node API](https://www.gatsbyjs.org/docs/node-apis/) so refer to `gatsby-node.js` for its configuration.
+
 ## 💫 Deploy
 
 <!-- Configure your repository info to enable this button -->
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=<git-repo-url>)
