@@ -1,10 +1,9 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { Design, Section } from '@liontechnyc/gemini';
-import { SEO, Navbar, Hero, About, Services, Footer } from '../components';
+import { SEO, Navbar, FixedNav, Hero, About, Services, Footer } from '../components';
 import { reduceGqlConnection } from '../utils';
 import staticImages from '../images';
-import FixedNav from '../components/FixedNav';
 
 const design = {
   layout: [
@@ -18,14 +17,14 @@ const design = {
     ['footer'],
   ],
   grid: {
-    y: [86, '0.4fr', '1fr'],
+    y: [86, '0.6fr', '1fr'],
     x: ['1fr'],
   },
 };
 
 const IndexPage = (props: { data: any }) => {
   const content = props.data;
-  const [{ meta }] = reduceGqlConnection(content.allIndexYaml);
+  const [{ meta }] = reduceGqlConnection(content.allSeoYaml);
   const navigation = reduceGqlConnection(content.allNavYaml);
   const files = reduceGqlConnection(content.allFile).reduce(
     (fileMap: object, node) => {
@@ -57,7 +56,7 @@ const IndexPage = (props: { data: any }) => {
         />
       </Section>
       <Section name="hero">
-        <Hero cta={meta.cta} action="Get A Quote" />
+        <Hero cta={meta.cta} action="Learn More" />
       </Section>
       <Section name="about">
         <About
@@ -87,7 +86,7 @@ const IndexPage = (props: { data: any }) => {
 
 export const query = graphql`
   query IndexPageContent {
-    allIndexYaml {
+    allSeoYaml {
       edges {
         node {
           meta {

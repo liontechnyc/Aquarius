@@ -89,7 +89,6 @@ section#nav {
 
 .about {
   @include mobile {
-    background: url('../images/bg2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -120,13 +119,11 @@ section#nav {
       font-size: 16px;
       font-weight: 300;
       line-height: 24px;
-      color: #81909b;
     }
   }
 
   &__content {
     @include desktop {
-      background: url('../images/bg2.jpg');
       background-size: cover;
       background-repeat: no-repeat;
       background-attachment: fixed;
@@ -210,7 +207,6 @@ section#nav {
       line-height: 24px;
       margin-bottom: 32px;
       font-weight: 300;
-      color: #81909b;
       @include desktop {
         padding-right: 100px;
       }
@@ -242,14 +238,13 @@ section#nav {
 
 .footer {
   position: relative;
-  background: darken(ui-color($palette, 'brand'), 3);
+  background: ui-color($palette, 'interactive');
   color: ui-layout($palette, 'light');
   text-align: center;
   padding-top: 24px;
   width: 100%;
   &__contact {
     &--header {
-      color: ui-color($palette, 'interactive');
       text-transform: uppercase;
       letter-spacing: 1px;
       @include desktop {
@@ -306,7 +301,7 @@ section#nav {
         }
         em > a {
           font-weight: bold;
-          color: ui-color($palette, 'interactive');
+          color: ui-color($palette, 'brand');
         }
       }
     }
