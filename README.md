@@ -1,5 +1,7 @@
 # Aquarius
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c314235d-48b9-4685-b6d0-6839e80bbc0c/deploy-status)](https://app.netlify.com/sites/aquarius-demo/deploys)
+
 ![Aquarius Logo](assets/logo.png)
 
 > _A Typescript fork of GatsbyJS bootstrapped with frontend optimization tools for development and production._
