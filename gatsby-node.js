@@ -1,7 +1,7 @@
 const path = require(`path`);
 
 const templates = {
-  policyTemplate: path.resolve(`src/templates/policyTemplate.js`),
+  policyTemplate: path.resolve(`src/templates/policyTemplate.tsx`),
 };
 
 async function generateMarkdownTemplates({ actions, graphql, reporter }) {

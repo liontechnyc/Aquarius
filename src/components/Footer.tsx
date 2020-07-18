@@ -1,8 +1,16 @@
 import React from 'react';
-import { Image, Block, Collection } from '@liontechnyc/gemini';
+import { Image, Block, Collection, UX } from '@liontechnyc/gemini';
+import keys from 'lodash/keys';
 import { placeholder } from '../utils';
 
-// ! TODO - Add social links in Collection items
+const mapSocialIcons: { [media: string]: string } = {
+  facebook: 'fab fa-facebook-square',
+  instagram: 'fab fa-instagram',
+  linkedin: 'fab fa-linkedin',
+  github: 'fab fa-github',
+  google: 'fab fa-google-plus-g',
+};
+
 export interface FooterProps {
   company: string;
   header: string;
@@ -12,9 +20,19 @@ export interface FooterProps {
     phone: string;
     email: string;
   };
+  social: {
+    [media: string]: string;
+  };
 }
 
-const Footer = ({ company, header, logo, contact }: FooterProps) => {
+const Footer = ({ company, header, logo, contact, social }: FooterProps) => {
+  const socialContent = keys(social).map((mediaChannel, id) => (
+    <li key={id}>
+      <a href={social[mediaChannel]}>
+        <i className={mapSocialIcons[mediaChannel]} />
+      </a>
+    </li>
+  ));
   return (
     <Block className="footer" renderAs="footer" isBlockLike={true}>
       <h4 className="footer__contact--header">{header}</h4>
@@ -29,11 +47,21 @@ const Footer = ({ company, header, logo, contact }: FooterProps) => {
           width={64}
         />
         <p className="footer__credits--signature">
-          <span style={{ float: 'left' }}>
+          <span>
             © {new Date().getFullYear()} <strong>{company}</strong> All Rights
             Reserved
           </span>
-          <span style={{ float: 'right' }}>
+          <span>
+            <Collection
+              containerClass="footer__credits--social"
+              direction="horizontal"
+              renderAs="ul"
+              align={{ horizontal: 'space-between', vertical: 'center' }}
+              items={socialContent}
+              fluid={true}
+            />
+          </span>
+          <span>
             Made By &nbsp;
             <em>
               <a href="https://liontech.nyc">LionTechNYC</a>
@@ -41,14 +69,6 @@ const Footer = ({ company, header, logo, contact }: FooterProps) => {
             &nbsp; with {`💕`}
           </span>
         </p>
-        {/*
-         <Collection
-          containerClass="footer__credits--social"
-          direction="horizontal"
-          renderAs="ul"
-          items={[<li />, <li />]}
-        />
-        */}
       </Block>
     </Block>
   );

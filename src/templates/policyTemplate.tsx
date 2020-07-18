@@ -1,23 +1,24 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Design, Section, Block, Image, Content } from '@liontechnyc/gemini';
-import { FixedNav, Navbar, SEO, Footer } from '../components';
+import { Design, Section, Content } from '@liontechnyc/gemini';
+import { Hero, FixedNav, Navbar, SEO, Footer } from '../components';
 import { reduceGqlConnection } from '../utils';
 import staticImages from '../images';
 
 const design = {
-  layout: [ ['content'], ['footer']],
+  layout: [['hero'], ['content'], ['footer']],
   grid: {
     y: ['1fr', 'auto'],
     x: ['1fr'],
   },
 };
+import './policy-template.scss';
 
-const IndexPage = (props: { data: any }) => {
-  const { seoContent, seoCover, navContent, coverImage } = props.data;
+const Template = (props: { data: any }) => {
+  const { seoContent, seoCover, navContent, markdownContent } = props.data;
+  const { html, frontmatter } = markdownContent;
   const [{ meta }] = reduceGqlConnection(seoContent);
   const navigation = reduceGqlConnection(navContent);
-  const startImage = coverImage.childImageSharp.fluid.src;
   typeof window !== 'undefined' && window.scrollTo(0, 0);
   return (
     <Design is="page" noHorizontalScroll={true} {...design}>
@@ -25,7 +26,7 @@ const IndexPage = (props: { data: any }) => {
         lang="en"
         cover={seoCover.childImageSharp.fixed.src}
         metaTags={[{ name: 'robots', content: 'index,follow' }]}
-        title="Aquarius Home"
+        title={frontmatter.title}
         {...meta}
       />
       <FixedNav
@@ -34,24 +35,29 @@ const IndexPage = (props: { data: any }) => {
         logo={staticImages['logo.svg']}
         revealAt={600}
       />
-      <Section name="content">
+      <Section name="content" containerClass="policy__coontainer">
         <Navbar
           title={meta.title}
           routes={navigation}
           logo={staticImages['logo.svg']}
         />
-        <Block
-          fluid={true}
-          centered={true}
-          className="content__container"
+        <Content
+          containerStyle={{
+            margin: '0 auto',
+            marginTop: 128,
+            paddingBottom: 64,
+            maxWidth: 'calc(100vw - 1em)',
+          }}
         >
-          <Content containerClass="content__hero" title={meta.header} description={meta.about}/>
-          <Image src={startImage} defaultImg={startImage} />
-        </Block>
+          <div
+            className="policy__container--content animated fadeIn"
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
+        </Content>
       </Section>
       <Section name="footer">
         <Footer
-          header="Launch Your Project Today"
+          header="Let's Work Together"
           company={meta.title}
           contact={meta.contact}
           logo={staticImages['logo.svg']}
@@ -63,7 +69,7 @@ const IndexPage = (props: { data: any }) => {
 };
 
 export const pageQuery = graphql`
-  query IndexPageContent {
+  query PostByPath($path: String!) {
     seoContent: allSeoYaml {
       edges {
         node {
@@ -107,14 +113,14 @@ export const pageQuery = graphql`
         }
       }
     }
-    coverImage: file(relativePath: { eq: "start.png" }) {
-      childImageSharp {
-        fluid {
-          src
-        }
+    markdownContent: markdownRemark(frontmatter: { path: { eq: $path } }) {
+      html
+      frontmatter {
+        path
+        title
       }
     }
   }
 `;
 
-export default IndexPage;
+export default Template;

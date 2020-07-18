@@ -2,6 +2,12 @@ $mobile-width: 320px;
 $tablet-width: 720px;
 $desktop-width: 1024px;
 
+@mixin xs-mobile {
+  @media (min-width: 0px) and (max-width: #{$mobile-width - 1px}) {
+    @content;
+  }
+}
+
 @mixin mobile {
   @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
     @content;

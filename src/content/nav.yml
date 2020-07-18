@@ -4,10 +4,16 @@
   route: /
 
 - title: Services
-  route: /#services
+  route: /#
 
 - title: About
-  route: /#about
+  route: /#
   
 - title: Contact Us
-  route: /#footer
+  route: /#
+
+- title: Privacy Policy
+  route: /privacy
+
+- title: Cookies Policy
+  route: /cookies

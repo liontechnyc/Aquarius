@@ -35,7 +35,7 @@ const NavMenu = ({
           <NavMenuTitle>
             <h4>{title}</h4>
             <button
-              className="navigation__btn"
+              className="btn navigation__btn"
               onClick={() => setVisibility(false)}
             >
               <i className="fas fa-times" />

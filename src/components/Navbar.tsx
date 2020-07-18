@@ -42,7 +42,7 @@ const Navbar = ({ logo, title, routes }: NavbarProps) => {
             </Link>,
             <h4>{title}</h4>,
             <button
-              className="navigation__btn"
+              className="btn navigation__btn"
               onClick={() => setNavMenuVisibility(true)}
             >
               <i className="fas fa-bars" />
@@ -72,7 +72,7 @@ const Navbar = ({ logo, title, routes }: NavbarProps) => {
                 height={50}
               />
             </Link>,
-            ...navItems,
+            <div className="navigation__routes">{navItems}</div>,
             <h1>{title}</h1>,
           ]}
         />

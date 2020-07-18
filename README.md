@@ -2,7 +2,7 @@
 
 ![Aquarius Logo](assets/logo.png)
 
-> _A Typescript fork of Gatsby bootstrapped with frontend optimization tools for development and production._
+> _A Typescript fork of GatsbyJS bootstrapped with frontend optimization tools for development and production._
 
 ## 🚀 Quick Start
 

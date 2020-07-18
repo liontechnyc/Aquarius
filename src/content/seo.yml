@@ -1,19 +1,23 @@
 
 - meta:
     title: Aquarius
-    description: We specialize in providing you satisfaction
+    description:  A Typescript fork of GatsbyJS bootstrapped with frontend optimization tools for development and production.
     keywords:
     - business
     - industry
     - tech
     author: "@LionTechNYC"
-    cta: An Example Site With Aquarius
-    about: We ensure the best quality from start to finish
+    header: GatsbyJS With Super Powers
+    cta: A Typescript fork of GatsbyJS bootstrapped with frontend optimization tools for development and production. 
+    about:  A Typescript fork of GatsbyJS bootstrapped with frontend optimization tools for development and production.
+    publicUrl: /
     contact:
-      address: ''
-      email: info@mybiz.com
+      address: Brooklyn, NY
+      email: info@liontech.nyc
       phone: (123) 456 - 7890
+      booking: https://liontech.nyc
     social:
-      instagram: /
-      facebook: /
-      linkedin: /
+      instagram: https://www.instagram.com/liontechnyc
+      facebook: https://www.facebook.com/LionTechNYC
+      linkedin: https://www.linkedin.com/company/liontechnyc
+      github: https://github.com/liontechnyc

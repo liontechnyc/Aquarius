@@ -1,23 +1,23 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Design, Section, Block, Image, Content } from '@liontechnyc/gemini';
-import { FixedNav, Navbar, SEO, Footer } from '../components';
+import { Design, Section, Block, Image } from '@liontechnyc/gemini';
+import { Hero, FixedNav, Navbar, SEO, Footer } from '../components';
 import { reduceGqlConnection } from '../utils';
 import staticImages from '../images';
 
 const design = {
-  layout: [ ['content'], ['footer']],
+  layout: [['content'], ['footer']],
   grid: {
     y: ['1fr', 'auto'],
     x: ['1fr'],
   },
 };
 
-const IndexPage = (props: { data: any }) => {
+const ErrorPage = (props: { data: any }) => {
   const { seoContent, seoCover, navContent, coverImage } = props.data;
   const [{ meta }] = reduceGqlConnection(seoContent);
   const navigation = reduceGqlConnection(navContent);
-  const startImage = coverImage.childImageSharp.fluid.src;
+  const errorImage = coverImage.childImageSharp.fluid.src;
   typeof window !== 'undefined' && window.scrollTo(0, 0);
   return (
     <Design is="page" noHorizontalScroll={true} {...design}>
@@ -25,7 +25,7 @@ const IndexPage = (props: { data: any }) => {
         lang="en"
         cover={seoCover.childImageSharp.fixed.src}
         metaTags={[{ name: 'robots', content: 'index,follow' }]}
-        title="Aquarius Home"
+        title="404 Page Not Found"
         {...meta}
       />
       <FixedNav
@@ -43,15 +43,14 @@ const IndexPage = (props: { data: any }) => {
         <Block
           fluid={true}
           centered={true}
-          className="content__container"
+          style={{ marginTop: 128, marginBottom: 64, padding: '1em' }}
         >
-          <Content containerClass="content__hero" title={meta.header} description={meta.about}/>
-          <Image src={startImage} defaultImg={startImage} />
+          <Image src={errorImage} defaultImg={errorImage} />
         </Block>
       </Section>
       <Section name="footer">
         <Footer
-          header="Launch Your Project Today"
+          header="Let's Work Together"
           company={meta.title}
           contact={meta.contact}
           logo={staticImages['logo.svg']}
@@ -63,7 +62,7 @@ const IndexPage = (props: { data: any }) => {
 };
 
 export const pageQuery = graphql`
-  query IndexPageContent {
+  query ErrorPageContent {
     seoContent: allSeoYaml {
       edges {
         node {
@@ -107,7 +106,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    coverImage: file(relativePath: { eq: "start.png" }) {
+    coverImage: file(relativePath: { eq: "404.png" }) {
       childImageSharp {
         fluid {
           src
@@ -117,4 +116,4 @@ export const pageQuery = graphql`
   }
 `;
 
-export default IndexPage;
+export default ErrorPage;
