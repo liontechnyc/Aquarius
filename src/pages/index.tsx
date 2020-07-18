@@ -6,7 +6,7 @@ import { reduceGqlConnection } from '../utils';
 import staticImages from '../images';
 
 const design = {
-  layout: [ ['content'], ['footer']],
+  layout: [['content'], ['footer']],
   grid: {
     y: ['1fr', 'auto'],
     x: ['1fr'],
@@ -40,12 +40,12 @@ const IndexPage = (props: { data: any }) => {
           routes={navigation}
           logo={staticImages['logo.svg']}
         />
-        <Block
-          fluid={true}
-          centered={true}
-          className="content__container"
-        >
-          <Content containerClass="content__hero" title={meta.header} description={meta.about}/>
+        <Block fluid={true} centered={true} className="content__container">
+          <Content
+            containerClass="content__hero"
+            title={meta.header}
+            description={meta.about}
+          />
           <Image src={startImage} defaultImg={startImage} />
         </Block>
       </Section>

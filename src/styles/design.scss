@@ -41,14 +41,14 @@ section#nav {
       color: #fff;
     }
   }
-  @include desktop{
-    div:first-child{
+  @include desktop {
+    div:first-child {
       flex: 0 1 10%;
     }
-    div:nth-child(2){
+    div:nth-child(2) {
       flex: 1 0 auto;
     }
-    &__routes{
+    &__routes {
       text-align: center;
       & > a {
         margin: 0 1rem;
@@ -57,24 +57,24 @@ section#nav {
   }
 }
 
-.content{
-  &__container{
+.content {
+  &__container {
     margin-top: 128px;
     padding: 1em;
     flex-direction: column-reverse;
-    @include desktop{
+    @include desktop {
       flex-direction: row;
       justify-content: space-between;
       & > figure {
         width: 30%;
-        @include desktop{
+        @include desktop {
           padding: 2em;
         }
       }
     }
   }
-  &__hero{
-    @include desktop{
+  &__hero {
+    @include desktop {
       padding: 0 5%;
     }
   }
@@ -131,7 +131,7 @@ section#nav {
       justify-content: center;
       text-align: center;
     }
-    @include desktop{
+    @include desktop {
       padding: 0 5%;
     }
     &--signature {
