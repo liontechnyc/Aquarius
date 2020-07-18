@@ -79,17 +79,24 @@
     "gatsby",
     "react",
     "typescript",
-    "liontechnyc"
+    "liontechnyc",
+    "frontend",
+    "ui",
+    "javascript",
+    "ux",
+    "content",
+    "web"
   ],
   "license": "GPL-2.0-only",
   "scripts": {
-    "build": "gatsby build",
+    "build": "npm run optimize && gatsby build",
     "develop": "gatsby develop -p 5000",
     "format": "tslint \"{src}/**/*.{ts,tsx}\" --quiet --fix || prettier --write \"*/**/*.{js,json,md,scss}\"",
     "lint-staged": "tslint \"src/**/*.{js,ts,tsx}\" --fix || prettier --write \"*/**/*.{js,json,md,scss}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "stage": "npm run clean && npm run build && npm run serve",
     "test": "jest",
     "optimize": "ts-node scripts/optimize.ts",
     "type-check": "tsc --noEmit"
