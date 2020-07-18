@@ -95,18 +95,19 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 npm run <script>
 ```
 
-| Script        | Function                                                      |
-| ------------- | ------------------------------------------------------------- |
-| `build`       | Compile project for production and distribution               |
-| `develop`     | Run development server on port 5000                           |
-| `format`      | Lint the codebase and assert style pattern                    |
-| `lint-staged` | Same as `format` however, specifically for use with Git Hooks |
-| `start`       | Same as `develop`                                             |
-| `serve`       | Serve production build locally; _great for staging_           |
-| `clean`       | Clean artifacts from `build` and `develop`                    |
-| `test`        | Run unit test                                                 |
-| `optimize`    | Optimize static images for web and mobile; in `src/images`    |
-| `type-check`  | Assert Typescript typings                                     |
+| Script        | Function                                                                                |
+| ------------- | --------------------------------------------------------------------------------------- |
+| `build`       | Compile project for production and distribution                                         |
+| `develop`     | Run development server on port 5000                                                     |
+| `format`      | Lint the codebase and assert style pattern                                              |
+| `lint-staged` | Same as `format` however, specifically for use with Git Hooks                           |
+| `start`       | Same as `develop`                                                                       |
+| `serve`       | Serve production build locally; _great for staging development builds_                  |
+| `stage`       | Optimzes assets, builds then serves the app locally _ideal for QA testing SSR behavior_ |
+| `clean`       | Clean artifacts from `build` and `develop`                                              |
+| `test`        | Run unit test                                                                           |
+| `optimize`    | Optimize static images for web and mobile; in `src/images`                              |
+| `type-check`  | Assert Typescript typings                                                               |
 
 > - You may have to run `npm start` twice due to a glitch with the `sharp` and `gatsby-plugin-manifest` modules. Use this remedy only if it hangs on **non-square images** compilation \*
 
