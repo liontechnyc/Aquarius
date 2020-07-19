@@ -49,11 +49,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `versatiles`,
-        short_name: `VersaTiles`,
+        name: `aquarius`,
+        short_name: `Aquarius`,
         start_url: `/`,
-        background_color: `#021f36`,
-        theme_color: `#ffa800`,
+        background_color: `#2d3142`,
+        theme_color: `#3993dd`,
         display: `minimal-ui`,
         icon: `src/images/logo.svg`, // This path is relative to the root of the site.
       },
