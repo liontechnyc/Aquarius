@@ -43,12 +43,12 @@ const IndexPage = (props: PageProps) => {
   return (
     <Page>
       <SEO
-          lang="en"
-          cover={seoCover.childImageSharp.fixed.src}
-          metaTags={[{ name: 'robots', content: 'index,follow' }]}
-          title="Aquarius Home"
-          {...meta}
-        />
+        lang="en"
+        cover={seoCover.childImageSharp.fixed.src}
+        metaTags={[{ name: 'robots', content: 'index,follow' }]}
+        title="Aquarius Home"
+        {...meta}
+      />
       <Design is="page" noHorizontalScroll={true} {...design}>
         <FixedNav
           title={meta.title}

@@ -43,12 +43,12 @@ const ErrorPage = (props: PageProps) => {
   return (
     <Page>
       <SEO
-          lang="en"
-          cover={seoCover.childImageSharp.fixed.src}
-          metaTags={[{ name: 'robots', content: 'index,follow' }]}
-          title="404 Page Not Found"
-          {...meta}
-        />
+        lang="en"
+        cover={seoCover.childImageSharp.fixed.src}
+        metaTags={[{ name: 'robots', content: 'index,follow' }]}
+        title="404 Page Not Found"
+        {...meta}
+      />
       <Design is="page" noHorizontalScroll={true} {...design}>
         <FixedNav
           title={meta.title}

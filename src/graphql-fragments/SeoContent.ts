@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby';
 
-export const SeoMetaFragment =  graphql`
+export const SeoMetaFragment = graphql`
   fragment SeoMetaFragment on SeoYamlConnection {
     edges {
       node {
