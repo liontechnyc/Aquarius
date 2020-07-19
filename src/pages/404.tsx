@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from 'react';
+import React from 'react';
 import { graphql } from 'gatsby';
 import { Design, Section, Block, Image } from '@liontechnyc/gemini';
 import { Page, SEO, FixedNav, Navbar, Footer } from '../components';
@@ -36,7 +36,7 @@ const design = {
   },
 };
 
-const ErrorPage = (props: PageProps) => {
+const ErrorPage = (props: StaticPageProps) => {
   const { seoContent, seoCover, navContent } = props.data;
   const [{ meta }] = reduceGqlConnection(seoContent);
   const navigation = reduceGqlConnection(navContent);

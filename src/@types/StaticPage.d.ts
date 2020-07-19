@@ -1,4 +1,4 @@
-declare interface PageProps {
+declare interface StaticPageProps {
   data: any;
   location: Location;
   navigate: Navigator;
