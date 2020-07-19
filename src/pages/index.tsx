@@ -45,7 +45,10 @@ const IndexPage = (props: { data: any }) => {
             title={meta.header}
             description={meta.about}
           />
-          <Image src={staticImages['start.png']} defaultImg={staticImages['start.png']} />
+          <Image
+            src={staticImages['start.png']}
+            defaultImg={staticImages['start.png']}
+          />
         </Block>
       </Section>
       <Section name="footer">
