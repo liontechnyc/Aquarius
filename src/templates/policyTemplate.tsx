@@ -50,7 +50,7 @@ const Template = (props: { data: any }) => {
           }}
         >
           <div
-            className="policy__container--content animated fadeIn"
+            className="policy__container--content"
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </Content>
