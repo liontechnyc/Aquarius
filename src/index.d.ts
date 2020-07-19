@@ -17,3 +17,13 @@ declare module '*.jpeg' {
   const value: string;
   export = value;
 }
+
+declare module '*.gql' {
+  const value: string;
+  export = value;
+}
+
+declare module '*.graphql' {
+  const value: string;
+  export = value;
+}

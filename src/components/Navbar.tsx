@@ -12,8 +12,9 @@ export interface NavbarProps {
 
 const Navbar = ({ logo, title, routes }: NavbarProps) => {
   const [navMenuVisibility, setNavMenuVisibility] = useState(false);
-  const navItems = routes.map(({ title, route }) => (
+  const navItems = routes.map(({ title, route }, id) => (
     <Link
+      key={id}
       activeClassName="active"
       onClick={
         navMenuVisibility ? () => setNavMenuVisibility(false) : undefined

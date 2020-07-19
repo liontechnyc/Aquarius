@@ -33,6 +33,7 @@
     "gatsby-transformer-yaml": "^2.4.2",
     "graphql-tag": "^2.10.3",
     "isomorphic-fetch": "^2.2.1",
+    "lodash": "^4.17.19",
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",

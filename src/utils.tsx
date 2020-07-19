@@ -1,5 +1,6 @@
 /** module for utility functions  */
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
+import { StaticQuery, GatsbyGraphQLObjectType } from 'gatsby';
 
 /** Declarative setInterval */
 export function useInterval(cb: () => void, delay?: number): void {
@@ -25,6 +26,20 @@ export function useInterval(cb: () => void, delay?: number): void {
     [delay]
   );
 }
+
+/** Inject page with static content during SSR */
+export const withStaticQuery = (query: any) => {
+  return (WrappedComponent: React.ElementType) => {
+    return (props: any) => (
+      <StaticQuery
+        query={query}
+        render={(data) => {
+          return <WrappedComponent {...data} {...props} />;
+        }}
+      />
+    );
+  };
+};
 
 /** Convert GraphQL Relay Connection to native array-object pattern */
 export function reduceGqlConnection(connection: { edges: [{ node: any }] }) {

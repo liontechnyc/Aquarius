@@ -46,7 +46,7 @@ const Footer = ({ company, header, logo, contact, social }: FooterProps) => {
           defaultImg={logo || placeholder(100, 25)}
           width={64}
         />
-        <p className="footer__credits--signature">
+        <div className="footer__credits--signature">
           <span>
             © {new Date().getFullYear()} <strong>{company}</strong> All Rights
             Reserved
@@ -68,7 +68,7 @@ const Footer = ({ company, header, logo, contact, social }: FooterProps) => {
             </em>
             &nbsp; with {`💕`}
           </span>
-        </p>
+        </div>
       </Block>
     </Block>
   );
