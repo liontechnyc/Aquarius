@@ -17,7 +17,6 @@ const IndexPage = (props: { data: any }) => {
   const { seoContent, seoCover, navContent, coverImage } = props.data;
   const [{ meta }] = reduceGqlConnection(seoContent);
   const navigation = reduceGqlConnection(navContent);
-  const startImage = coverImage.childImageSharp.fluid.src;
   typeof window !== 'undefined' && window.scrollTo(0, 0);
   return (
     <Design is="page" noHorizontalScroll={true} {...design}>
@@ -46,7 +45,7 @@ const IndexPage = (props: { data: any }) => {
             title={meta.header}
             description={meta.about}
           />
-          <Image src={startImage} defaultImg={startImage} />
+          <Image src={staticImages['start.png']} defaultImg={staticImages['start.png']} />
         </Block>
       </Section>
       <Section name="footer">
@@ -104,13 +103,6 @@ export const pageQuery = graphql`
         node {
           title
           route
-        }
-      }
-    }
-    coverImage: file(relativePath: { eq: "start.png" }) {
-      childImageSharp {
-        fluid {
-          src
         }
       }
     }

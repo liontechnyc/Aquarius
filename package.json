@@ -89,7 +89,7 @@
   ],
   "license": "GPL-2.0-only",
   "scripts": {
-    "build": "npm run optimize && gatsby build",
+    "build": "gatsby build",
     "develop": "gatsby develop -p 5000",
     "format": "tslint \"{src}/**/*.{ts,tsx}\" --quiet --fix || prettier --write \"*/**/*.{js,json,md,scss}\"",
     "lint-staged": "tslint \"src/**/*.{js,ts,tsx}\" --fix || prettier --write \"*/**/*.{js,json,md,scss}\"",
