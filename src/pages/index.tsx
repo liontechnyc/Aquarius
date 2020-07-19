@@ -18,12 +18,7 @@ export const pageContent = graphql`
       }
     }
     navContent: allNavYaml {
-      edges {
-        node {
-          title
-          route
-        }
-      }
+      ...NavContentFragment
     }
   }
 `;
